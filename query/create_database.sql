@@ -1,0 +1,1 @@
+CREATE DATABASE yse_spring_mvc;
