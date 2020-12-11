@@ -12,7 +12,7 @@
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/yse_spring_mvc?serverTimezone=UTC" />
+			value="jdbc:mysql://localhost:3306/yse_spring_mvc?serverTimezone=UTC&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="username" value="yse_spring_mvc_user" />
 		<property name="password" value="1234" />
 	</bean>
