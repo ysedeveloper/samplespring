@@ -9,4 +9,17 @@
 	    (#{title}, #{category}, #{price})
 	    ]]>
 	</insert>
+	<select id="select_detail" parameterType="hashMap" resultType="hashMap">
+    <![CDATA[
+        select
+        title,
+        category,
+        price,
+	insert_date
+        from
+        book
+        where
+        book_id = #{bookId}			
+    ]]>
+</select>
 </mapper>
