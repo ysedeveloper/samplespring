@@ -10,4 +10,6 @@ public interface BookService {
 
 	boolean edit(Map<String, Object> map);
 
+	boolean remove(Map<String, Object> map);
+
 }
