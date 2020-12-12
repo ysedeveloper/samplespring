@@ -20,4 +20,9 @@ public class BookServiceImpl implements BookService {
 	    
 	}
 	
+	@Override
+	public Map<String, Object> detail(Map<String, Object> map){
+	    return this.bookDao.selectDetail(map);
+	}
+	
 }
