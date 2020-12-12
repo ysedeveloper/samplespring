@@ -41,19 +41,23 @@
 		        book_id = #{bookId}
 		    ]]>
 	</delete>
-		
+			
 	<select id="select_list" parameterType="hashMap" resultType="hashMap">
-	    <![CDATA[
-	        select
-	        book_id,
-	        title,
-	        category,
-	        price,
-	        insert_date
-	        from
-	        book			
-	        order by insert_date desc									
+	  <![CDATA[
+	    select
+	    book_id,
+	    title,
+	    category,
+	    price,
+	    insert_date
+	    from
+	    book
+	    where 1 = 1
 	    ]]>
+	    <if test="keyword != null and keyword != ''">
+	      and (title like CONCAT('%',#{keyword},'%') or category like CONCAT('%',#{keyword},'%'))
+	    </if>
+	    order by insert_date desc
 	</select>	
 
 </mapper>
