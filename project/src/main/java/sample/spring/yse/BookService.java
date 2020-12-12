@@ -8,4 +8,6 @@ public interface BookService {
 
 	Map<String, Object> detail(Map<String, Object> map);
 
+	boolean edit(Map<String, Object> map);
+
 }
