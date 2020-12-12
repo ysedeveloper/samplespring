@@ -44,4 +44,14 @@ public class BookController {
 	    mav.setViewName("/book/detail");
 	    return mav;
 	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public ModelAndView update(@RequestParam Map<String, Object> map) {
+	    Map<String, Object> detailMap = this.bookService.detail(map);
+	    
+	    ModelAndView mav = new ModelAndView();
+	    mav.addObject("data", detailMap);
+	    mav.setViewName("/book/update");
+	    return mav;
+	}
 }
